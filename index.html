@@ -10,49 +10,67 @@
 </head>
 
 <body>
-    
-    <h1>Абоненти</h1>
+    <div class="container">
+
+        <h1>Абоненти</h1>
+
+        
+        <!-- Форма для додавання одного абонента -->
+        <section>
+            <h2>Додати абонента</h2>
+            <form id="add-subscriber-form" class="form">
+                <label>Номер телефону: <input type="text" id="phoneNumber"></label><br>
+                <label>Домашня адреса: <input type="text" id="address"></label><br>
+                <label>Власник: <input type="text" id="owner"></label><br>
+                <label>Сумарна тривалість розмов: <input type="number" id="totalCallDuration"></label><br>
+                <label>Рахунок: <input type="number" id="accountBalance"></label><br>
+                <button type="submit">Додати</button>
+            </form>
+        </section>
 
 
-    <h2>Додати абонента</h2>
-    <form id="add-subscriber-form">
-        <label>Номер телефону: <input type="text" id="phoneNumber"></label><br>
-        <label>Домашня адреса: <input type="text" id="address"></label><br>
-        <label>Власник: <input type="text" id="owner"></label><br>
-        <label>Сумарна тривалість розмов: <input type="number" id="totalCallDuration"></label><br>
-        <label>Рахунок: <input type="number" id="accountBalance"></label><br>
-        <button type="submit">Додати</button>
-    </form>
+        <!--Поле для пошуку абонента за номером телефону -->
+        <section>
+            <h2>Пошук абонента за номером телефону</h2>
+            <label>Номер телефону: <input type="text" id="searchPhoneNumber"></label>
+            <button id="searchButton">Пошук</button>
+            <div id="search-result"></div>
+        </section>
 
 
-    <h2>Пошук абонента за номером телефону</h2>
-    <label>Номер телефону: <input type="text" id="searchPhoneNumber"></label>
-    <button id="searchButton">Пошук</button>
-    <div id="search-result"></div>
+        <!-- Поле для вибірки абонентів за адресою та тривалістю розмов -->
+        <section>
+            <h2>Вибірка абонентів за адресою та тривалістю розмов</h2>
+            <label>Адреса: <input type="text" id="filterAddress"></label><br>
+            <label>Мінімальна тривалість розмов: <input type="number" id="minCallDuration"></label><br>
+            <button id="filterButton">Отримати вибірку</button>
+            <div id="filtered-results"></div>
+        </section>
 
 
-    <h2>Вибірка абонентів за адресою та тривалістю розмов</h2>
-    <label>Адреса: <input type="text" id="filterAddress"></label><br>
-    <label>Мінімальна тривалість розмов: <input type="number" id="minCallDuration"></label><br>
-    <button id="filterButton">Отримати вибірку</button>
-    <div id="filtered-results"></div>
+        <!-- Форма для редагування інформації про абонента -->
+        <section>
+            <h2>Редагування інформації про абонента</h2>
+            <form id="update-subscriber-form" class="form">
+                <label>Номер телефону для редагування: <input type="text" id="updatePhoneNumber"></label><br>
+                <label>Домашня адреса: <input type="text" id="updateAddress"></label><br>
+                <label>Власник: <input type="text" id="updateOwner"></label><br>
+                <label>Сумарна тривалість розмов: <input type="number" id="updateCallDuration"></label><br>
+                <label>Рахунок: <input type="number" id="updateBalance"></label><br>
+                <button type="submit">Редагувати</button>
+            </form>
+        </section>
 
 
-    <h2>Редагування інформації про абонента</h2>
-    <form id="update-subscriber-form">
-        <label>Номер телефону для редагування: <input type="text" id="updatePhoneNumber"></label><br>
-        <label>Домашня адреса: <input type="text" id="updateAddress"></label><br>
-        <label>Власник: <input type="text" id="updateOwner"></label><br>
-        <label>Сумарна тривалість розмов: <input type="number" id="updateCallDuration"></label><br>
-        <label>Рахунок: <input type="number" id="updateBalance"></label><br>
-        <button type="submit">Редагувати</button>
-    </form>
+        <!-- Форма для видалення інформації про абонента -->
+        <section>
+            <h2>Видалити абонента</h2>
+            <label>Номер телефону для видалення: <input type="text" id="deletePhoneNumber"></label>
+            <button id="deleteButton">Видалити</button>
+        </section>
 
 
-    <h2>Видалити абонента</h2>
-    <label>Номер телефону для видалення: <input type="text" id="deletePhoneNumber"></label>
-    <button id="deleteButton">Видалити</button>
-
+    </div>
 
 </body>
 
